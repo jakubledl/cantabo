@@ -1,0 +1,31 @@
+{
+  "title": "Psalmus 109",
+  "firstLine": [
+    { "text": "Di" },
+    { "text": "xit", "appendix": " " },
+    { "text": "Dó" },
+    { "text": "mi" },
+    { "text": "nus", "appendix": " " },
+    { "text": "Dó", "type": "accent" },
+    { "text": "mi" },
+    { "text": "no", "appendix": " " },
+    { "text": "me", "type": "accent" },
+    { "text": "o", "appendix": ": * " },
+    { "text": "se" },
+    { "text": "de", "appendix": " " },
+    { "text": "a", "appendix": " " },
+    { "text": "dex", "type": "accent" },
+    { "text": "tris", "appendix": " " },
+    { "text": "me", "type": "accent" },
+    { "text": "is", "appendix": "." }
+  ],
+  "otherLines": [
+    "Donec ponam ini<strong>mí</strong>cos <strong>tu</strong>os, * scabéllum <strong>pe</strong>dum tu<strong>ó</strong>rum.",
+    "Virgam virtútis tuæ emíttet Dómi<strong>nus</strong> ex <strong>Si</strong>on: * domináre in médio inimi<strong>có</strong>rum tu<strong>ó</strong>rum.",
+    "Tecum princípium in die virtútis tuæ in splendóri<strong>bus</strong> sanc<strong>tó</strong>rum: * ex útero ante lucíferum <strong>gé</strong>nu<strong>i</strong> te.",
+    "Jurávit Dóminus, et non pœni<strong>té</strong>bit <strong>e</strong>um: * Tu es sacérdos in ætérnum secúndum órdi<strong>nem</strong> Mel<strong>chí</strong>sedech.",
+    "Dóminus a <strong>dex</strong>tris <strong>tu</strong>is, * confrégit in die iræ <strong>su</strong>æ <strong>re</strong>ges.",
+    "Judicábit in natiónibus, im<strong>plé</strong>bit ru<strong>í</strong>nas: * conquassábit cápita in <strong>ter</strong>ra mul<strong>tó</strong>rum.",
+    "De torrénte in <strong>vi</strong>a <strong>bi</strong>bet: * proptérea exal<strong>tá</strong>bit <strong>ca</strong>put."
+  ]
+}
