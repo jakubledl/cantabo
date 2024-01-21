@@ -7,9 +7,14 @@ export interface Psalm {
   otherLines: string[];
 }
 
-interface Syllable {
+export interface Syllable {
   text: string;
-  appendix: string;
-  omitted?: true;
+  follow: string;
+  omitted: boolean;
   type?: "accent" | "preparatory"
+}
+
+export interface PsalmGroup {
+  antiphon?: string;
+  psalms: Psalm[];
 }

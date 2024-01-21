@@ -1,4 +1,4 @@
-import type { ModeWithTermination, Psalm } from ".";
+import type { ModeWithTermination, Psalm, Syllable } from ".";
 
 export interface Repository {
   getPsalm(id: string, mode: ModeWithTermination): Promise<Psalm | undefined>;
@@ -6,14 +6,31 @@ export interface Repository {
   getRequiemAeternam(mode: ModeWithTermination): Promise<string[] | undefined>;
 }
 
+type RemoteSyllable = Omit<Syllable, "omitted" | "follow"> & { omitted?: boolean, follow?: string};
+type RemotePsalm = Omit<Psalm, "firstLine" | "mode"> & { firstLine: RemoteSyllable[] };
+
 export class RemoteRepository implements Repository {
   constructor(private fetcher: typeof fetch, private repositoryUrl: string) {}
 
   async getPsalm(id: string, mode: ModeWithTermination): Promise<Psalm | undefined> {
     try {
-      return await this.getJson<Psalm>(
+      const data = await this.getJson<RemotePsalm>(
         `${this.repositoryUrl}/psalms/${id}-${this.processMode(mode)}`
       );
+
+      return {
+        title: data.title,
+        mode,
+        firstLine: data.firstLine.map(rs => {
+          return {
+            text: rs.text,
+            follow: rs.follow ?? "",
+            omitted: false,
+            type: rs.type,
+          };
+        }),
+        otherLines: data.otherLines
+      };
     } catch (err) {
       console.log(err);
       return undefined;

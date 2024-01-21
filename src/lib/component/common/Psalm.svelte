@@ -9,7 +9,7 @@
 <ol>
   <li class="first_line">
     {#each psalm.firstLine as syllable}
-      <span class:omitted={syllable.omitted} class:accent={syllable.type === "accent"}>{syllable.text}{#if syllable.appendix !== undefined}{syllable.appendix}{/if}</span>
+      <span class:omitted={syllable.omitted} class:accent={syllable.type === "accent"}>{syllable.text}{syllable.follow}</span>
     {/each}
   </li>
   {#each psalm.otherLines as line}
